@@ -63,16 +63,12 @@ body {
 
 footer {
     background-color: #fff;
-    display: -webkit-flex;
-    display: flex;
-    size: 80%;
-    flex-direction: row;
     margin-top: 5em;
+    width: 100%;
 }
 
 #fs, #gh, #me {
-    height: 50%;
-    width: auto;
+    padding-top: 1em;
 }
 
 
