@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guessing Game</title>
+        <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css" type="text/css" >
+    </head>
+    <body>
+        <div class="container"> 
+        <!-- start of container -->
+
+            <div id="app">
+            <!-- start of main app content -->
+                
+                <div id="headers">
+                    <h1 class="result">Play With Me!</h1>
+                    <h2>Guess what number I am thinking of...</h2>
+                    <h3 class="hintoutput">(Between 1 & 100...)</h3>
+                </div>
+
+                <div id="userinput">
+                    <input type="textarea" class="userguess" maxlength="3" name="num">
+                    <input type="submit" id="inputsubmit" class="btn btn-success" value="Guess!">
+                </div>
+
+                <div id="guesses">
+                    <div class="pastguess1">-</div>
+                    <div class="pastguess2">-</div>
+                    <div class="pastguess3">-</div>
+                    <div class="pastguess4">-</div>
+                </div>
+
+                <div id="buttons">
+                    <input type="reset" id="resetbutton" class="btn btn-info" value="Reset">
+                    <input type="submit" id="hintbutton" class="btn btn-info" value="Hint">
+                </div>
+
+            </div>
+            <!-- end of main app content -->
+
+            <footer>
+                <img id="fs" src="pix/fa-logo@2x.png">
+                <img id="me" src="pix/missanichka.jpg">
+                <img id="gh" src="pix/grace_hopper_academy.png">
+            </footer>
+        
+        </div>
+        <!-- end of container -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/guessinggame.js"></script>
+    </body>
+</html>
