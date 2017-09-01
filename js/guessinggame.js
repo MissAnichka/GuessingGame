@@ -58,6 +58,9 @@ function shuffle(arr){
 
 // jQuery begins, on page load:
 $(document).ready(function startNewGame(){
+//Says 'Play With Me' on page load / reset:
+    responsiveVoice.speak('Play with me');
+    
 //when page loads...start new game...
     var thisGame = newGame();
 
