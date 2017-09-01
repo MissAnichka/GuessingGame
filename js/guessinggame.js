@@ -61,6 +61,13 @@ $(document).ready(function startNewGame(){
 //when page loads...start new game...
     var thisGame = newGame();
 
+//when user presses enter instead of clicking guess:
+$('.userguess').keyup(function(k){
+// their number input is referred to the 'on click' function to get checked: 
+    if(k.which === 13){
+         $('#inputsubmit').trigger('click');
+    }
+})
 //when user clicks Guess:
 $('#inputsubmit').on('click', function(){
 // their number input is checked: 
