@@ -65,6 +65,9 @@ body {
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     margin-top: 5em;
     margin-bottom: 0;
     padding-bottom: 0;  
@@ -72,14 +75,12 @@ footer {
 }
 
 #fs, #gh, #me {
-    height: 8em;
+    height: 6em;
     width: auto;
-    padding-top: 1em;
+    padding: 1em;
 }
 #me {
-    position: fixed;
-    left: 50%;
-    right: 50%;
+    float: left;
 }
 
 #gh {
