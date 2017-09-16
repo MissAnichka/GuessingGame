@@ -5,6 +5,10 @@ body {
     background-image: url(https://s-media-cache-ak0.pinimg.com/originals/4e/cc/57/4ecc5727c94b40b7136b13c9c3169b1f.jpg);
 }
 
+@media screen and (max-width:900px) {
+    footer {float: left;font-size:0.5em;}
+}
+
 .container {
     display: -webkit-flex;
     display: flex;
@@ -65,7 +69,7 @@ body {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     margin-top: 5em;
