@@ -80,9 +80,15 @@ $('#inputsubmit').on('click', function(){
     $('.userguess').val('');
     responsiveVoice.speak(output);
 
+//added a winning sound to play when someone wins!
+    if(output == "You Win!"){
+        let audio = new Audio('audio/winning.wav');
+        audio.play();
+    }
+
 //show 'click reset...' in h3 when player wins/loses:
     if(output === "You Win!" || output === "You Lose."){
-        $('.hintoutput').val('Click Reset to try again!');
+        $('.hintoutput').html('Click Reset to try again!');
     }
 
 //put previous guesses into boxes visible to player:
