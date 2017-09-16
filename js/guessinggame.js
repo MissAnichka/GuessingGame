@@ -5,17 +5,21 @@ class Game{
       this.winningNumber = generateWinningNumber();
     }
    checkGuess(){
-        if(this.playersGuess === this.winningNumber) return "You Win!";
-        if(this.pastGuesses.length > 3) return "You Lose.";
-        else if(this.pastGuesses.includes(this.playersGuess)) {
-            return "You have already guessed that number.";
+        if(this.pastGuesses.length > 2 || $('.result').val() === "You Lose."){
+            if(this.pastGuesses.length === 3) this.pastGuesses.push(this.playersGuess);
+            return "You Lose.";
         } else {
-            this.pastGuesses.push(this.playersGuess);
-            var diff = this.difference();
-            if(diff < 10) return "You\'re burning up!";
-            if(diff < 25) return "You\'re lukewarm.";
-            if(diff < 50) return "You\'re a bit chilly.";  
-            if(diff < 100) return "You\'re ice cold!";
+            if(this.playersGuess === this.winningNumber) return "You Win!";
+            else if(this.pastGuesses.includes(this.playersGuess)) {
+            return "You have already guessed that number.";
+            } else {
+                this.pastGuesses.push(this.playersGuess);
+                var diff = this.difference();
+                if(diff < 10) return "You\'re burning up!";
+                if(diff < 25) return "You\'re lukewarm.";
+                if(diff < 50) return "You\'re a bit chilly.";  
+                if(diff < 100) return "You\'re ice cold!";
+            }
         }
     }
     playersGuessSubmission(num){
@@ -94,6 +98,7 @@ $('#inputsubmit').on('click', function(){
 //show 'click reset...' in h3 when player wins/loses:
     if(output === "You Win!" || output === "You Lose."){
         $('.hintoutput').html('Click Reset to play again!');
+
     }
 
 //put previous guesses into boxes visible to player:
