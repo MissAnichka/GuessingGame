@@ -62,7 +62,7 @@ $(document).ready(function startNewGame(){
     responsiveVoice.speak('Play with me');
     
 //when page loads...start new game...
-    var thisGame = newGame();
+    let thisGame = newGame();
 
 //when user presses enter instead of clicking guess:
 $('.userguess').keyup(function(k){
@@ -81,14 +81,19 @@ $('#inputsubmit').on('click', function(){
     responsiveVoice.speak(output);
 
 //added a winning sound to play when someone wins!
-    if(output == "You Win!"){
+    if(output === "You Win!"){
         let audio = new Audio('audio/winning.wav');
         audio.play();
     }
 
+//show the answer in h2 when player loses:
+    if(output === "You Lose."){
+        $('h2').html('Nice try! The number was ' + thisGame.winningNumber);
+    }
+
 //show 'click reset...' in h3 when player wins/loses:
     if(output === "You Win!" || output === "You Lose."){
-        $('.hintoutput').html('Click Reset to try again!');
+        $('.hintoutput').html('Click Reset to play again!');
     }
 
 //put previous guesses into boxes visible to player:
