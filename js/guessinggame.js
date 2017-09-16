@@ -78,6 +78,7 @@ $('#inputsubmit').on('click', function(){
     var output = thisGame.playersGuessSubmission(userguessinput);
     $('.result').html(output);
     $('.userguess').val('');
+    responsiveVoice.speak(output);
 
 //show 'click reset...' in h3 when player wins/loses:
     if(output === "You Win!" || output === "You Lose."){
